@@ -11,6 +11,17 @@ This repository demonstrates a Cs-137 gamma spectrum simulation and comparison w
 
 Cesium-137 is a radioactive isotope commonly used for detector calibration, industrial gauges, medical applications, and environmental monitoring. It emits gamma radiation at 662 keV during its decay.
 
+## Automation Aspect
+
+The Python script automates the workflow of gamma spectrum analysis:
+- Reads detector data from a text file
+- Generates a simulated Cs-137 energy spectrum
+- Scales simulation and compares it with experimental data
+- Produces a publication-quality PNG plot
+
+This simple example showcases automation of data processing, simulation, and visualization, demonstrating practical skills in scientific programming.
+
+
 ## Files
 
 - `simulated_spectrum.py` – Python simulation and plotting (PNG output)  
