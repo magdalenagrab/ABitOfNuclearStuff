@@ -1,4 +1,3 @@
-# A Bit Of Nuclear Stuff
 # Cs-137 Gamma Spectrum Analysis (Python & C++)
 
 This repository demonstrates gamma spectrum analysis of Cs-137 implemented in both **Python** and **C++** for comparison.
