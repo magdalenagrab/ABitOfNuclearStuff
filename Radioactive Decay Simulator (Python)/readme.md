@@ -44,4 +44,74 @@ Using K-40 as the demo isotope highlights how radioactive decay is not only a re
 
 ## 🏗️ Project Structure
 
+project/  
+├── isotope.py # Isotope class (half-life, decay law, math utilities)  
+├── isotopes_data.py # Built-in isotope mini-database  
+├── decay_sim.py # Numerical simulation engine (numpy-based)  
+├── cli.py # Command-line interface with plotting support  
+└── README.md # Documentation  
+
+**isotope.py**  
+
+Defines the Isotope class:  
+
+- stores name and half-life  
+- computes decay constant  
+- computes remaining mass/activity after time  
+- includes helper textual descriptions for CLI output  
+
+**isotopes_data.py**  
+
+A convenient dictionary of common engineering & radiological isotopes:
+
+- Cs-137  
+- Co-60  
+- Sr-90  
+- Am-241  
+- U-238  
+- I-131  
+- Ir-192  
+- C-14  
+- K-40  
+- Th-232  
+
+This database can be easily extended with additional nuclides.
+
+**decay_sim.py**  
+
+Handles simulation of decay using:
+
+- float-friendly `numpy.arange` for time stepping  
+- vectorized numerical evaluation  
+- returns arrays for plotting / further analysis  
+
+It is designed to be imported both from:
+
+- CLI  
+- interactive Python sessions (Jupyter, VS Code, shell)  
+
+**cli.py**  
+
+A user-friendly interface with `argparse`. You can:
+
+✔ choose isotope  
+✔ set initial quantity  
+✔ set total time  
+✔ set step size  
+✔ automatically generate a plot  
+✔ save the plot to PNG  
+
+---
+
+## ▶️ Possible to run from command line:
+
+**Basic example: K-40 decay**
+
+```bash
+python cli.py K-40 --initial 100 --time 1e9 --step 5e7
+
+Example Output:
+
+Isotope K-40: after 1000000000.0 years, 65.0 units remain from the initial 100.
+Plot saved as K-40_decay.png
 
