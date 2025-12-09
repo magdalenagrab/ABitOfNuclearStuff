@@ -16,5 +16,6 @@ class Isotope:
         """Returns a description of the decay after a given time."""
         remaining = self.remaining_after_time(initial_amount, time)
         return (f"Isotope {self.name}: after {time} years, "
-                f"{remaining:.4f} units remain from the initial {initial_amount}.")
+                f"{remaining:.4f} units remain from the initial {initial_amount}.") 
+
 
